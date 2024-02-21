@@ -1,0 +1,211 @@
+\usepackage{fontspec}
+%\addfontfeature{LetterSpace=1.0}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Roboto}[Mapping=tex-text]
+\usepackage[paperwidth=215mm,paperheight=330mm,tmargin=1in,bmargin=1in,lmargin=1.5in,rmargin=1in,driver=xetex,verbose]{geometry}
+%\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1.5in,rmargin=1in}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{refstyle}
+\usepackage{float}
+\usepackage{todonotes}
+\reversemarginpar % place todo notes on left margin
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[toc, page]{appendix}
+\usepackage{pdfpages}
+% necessary in two side book to remove header from empty page
+\usepackage{emptypage}
+%need to be installed
+%refstyle todonotes appendix tocbibind multirow makecell footmisc metalogo titlesec
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+
+\AtBeginDocument{\providecommand\figref[1]{\ref{fig:#1}}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+\RS@ifundefined{subsecref}
+  {\newref{subsec}{name = \RSsectxt}}
+  {}
+\RS@ifundefined{thmref}
+  {\def\RSthmtxt{theorem~}\newref{thm}{name = \RSthmtxt}}
+  {}
+\RS@ifundefined{lemref}
+  {\def\RSlemtxt{lemma~}\newref{lem}{name = \RSlemtxt}}
+  {}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newlength{\lyxlabelwidth}      % auxiliary length
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%\setromanfont{Lora}[Mapping=tex-text]
+%% in XeTeX the fonstspec must load OpenType fonts present within Tex distribution by their file name
+%% therefore the bold and italic font must also be declared separately
+%\setromanfont{texgyrepagella-regular.otf}[BoldFont={texgyrepagella-bold.otf},ItalicFont={texgyrepagella-italic.otf}, Mapping=tex-text]
+%% disregrad the above. XeTex will use any fonts that's installed system-wide.
+\setromanfont{Roboto}[Mapping=tex-text]
+\setsansfont{Roboto}[Mapping=tex-text]
+\setmonofont{Envy Code R}
+\tolerance=270
+\emergencystretch=1.5em
+% additional fonts settings
+\usepackage{textcomp}
+\usepackage{amssymb}
+%\usepackage{fontawesome}
+\usepackage{xunicode}
+
+%% remove date in title
+\date{\vspace{-5ex}}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{tocbibind}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{pdflscape}
+\usepackage[bottom]{footmisc} %fix footnote position
+\usepackage{rotating} %for sideways
+\usepackage{metalogo} %for xelatex logo
+\usepackage[font={small,it}]{caption}
+\makeatother
+\usepackage{fancybox}
+%\usepackage[raggedright,bf,sf,toctitles]{titlesec}
+\usepackage[]{titlesec}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\raggedright}
+
+%% redefine structure names
+\def\subsectionautorefname{Subseksi}
+\def\figureautorefname{Gambar}%
+\def\tableautorefname{Tabel}%
+\renewcommand\appendixpagename{Lampiran}
+
+%% additional tabular settings
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+%\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\renewcommand{\tabcolsep}{7pt}
+
+%% column definition for sum and percentage columns
+\newcolumntype{x}{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{}}
+\newcolumntype{X}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{Y}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{Z}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%% just trying something fancy
+\usepackage{epigraph} 
+
+%% Indonesian localization
+%\usepackage[bahasai]{babel}
+\usepackage{polyglossia} % better than babel package
+%\setdefaultlanguage{bahasai} % default to Indonesian variant
+\setmainlanguage[variant=indonesian]{malay} % {bahasai} sometimes doesn't work
+
+%% some hyphenation exception
+%\begin{hyphenrules}{bahasai}
+%\hyphenation{
+%    men-da-pat-kan
+%    me-nye-leng-ga-ra-kan
+%    meng-a-ma-nat-kan
+%    pe-la-yan-an
+%    pem-ba-ngu-nan
+%    pe-nang-gu-la-ngan
+%    Pus-kes-mas
+%    Pem-ban-tu
+%    pe-nge-ta-hu-an
+%    Ke-se-ha-tan
+%    meng-gu-na-kan
+%    mi-kros-ko-pis
+%    kon-fir-ma-si
+%    la-bo-ra-to-ri-um
+%    peng-o-ba-tan
+%    stan-dar
+%    di-ta-nga-ni
+%    }
+%\end{hyphenrules}
+
+%\hyphenation{%
+%    me-nye-leng-ga-ra-kan
+%    }
+%\newcommand{\tP}{2020\ }
+%\newcommand{\namaKabupaten}{Kabupaten Belitung Timur\ }
+%\newcommand{\namaKabupatenKapital}{KABUPATEN BELITUNG TIMUR\ }
+\usepackage{wrapfig}
+
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+
+% code adapted from https://tex.stackexchange.com/a/11483/3954
+% some parameters for customization
+\def\shadowshift{3pt,-3pt}
+\def\shadowradius{6pt}
+
+\colorlet{innercolor}{black!60}
+\colorlet{outercolor}{gray!05}
+
+% this draws a shadow under a rectangle node
+\newcommand\drawshadow[1]{
+    \begin{pgfonlayer}{shadow}
+        \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+        \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+        \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+        \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+        \shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+        \shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+        \shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+        \shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+        \filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+    \end{pgfonlayer}
+}
+
+% create a shadow layer, so that we don't need to worry about overdrawing other things
+\pgfdeclarelayer{shadow}
+\pgfsetlayers{shadow,main}
+
+\newsavebox\mybox
+\newlength\mylen
+
+\newcommand\shadowimage[2][]{%
+\setbox0=\hbox{\includegraphics[#1]{#2}}
+\setlength\mylen{\wd0}
+\ifnum\mylen<\ht0
+\setlength\mylen{\ht0}
+\fi
+\divide \mylen by 120
+\def\shadowshift{\mylen,-\mylen}
+\def\shadowradius{\the\dimexpr\mylen+\mylen+\mylen\relax}
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+\drawshadow{image}
+\end{tikzpicture}} 
+
+% dealing with two-side whitespaces
+\raggedbottom
+\usepackage[bottom]{footmisc}
+
+% generate bibliography
+\usepackage[backend=biber,sorting=nyt,style=numeric]{biblatex}
+\addbibresource{pustaka.bib}
+
+% load hyperref last
+\usepackage[unicode=true,
+bookmarks=true, bookmarksnumbered=true, bookmarksopen=false,
+breaklinks=true, pdfstartview={0 0 1}, pdfborder={0 0 0}, pdfborderstyle={}, linktocpage=true]{hyperref}
+\hypersetup{pdftitle={Profil Kesehatan Kabupaten Belitung Timur Tahun 2023},
+	pdfauthor={Dinkes Belitung Timur}}

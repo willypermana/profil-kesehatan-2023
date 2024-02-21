@@ -1,0 +1,49 @@
+%\documentclass[oneside]{extbook}
+\documentclass[oneside]{extbook}
+\include{bab_00_preamble-front/preamble}
+\include{bab_00_preamble-front/variabel}
+
+\begin{document}
+%\includepdf[pages=-]{coverProfil2023.pdf}
+%\include{bab_00_preamble-front/bab_00_frontmatter}
+
+\mainmatter
+
+% \include{bab_01/bab_01_gambaran_umum}
+% \clearpage
+% \include{bab_02/bab_02_sarana_prasarana_kesehatan}
+% \clearpage
+% \include{bab_03/bab_03_sumber_daya_manusia_kesehatan} %done
+% \clearpage
+% \include{bab_04/bab_04_pembiayaan_kesehatan} %done
+% \clearpage
+% \include{bab_05/bab_05_kesehatan_keluarga} %done
+% \clearpage
+% \include{bab_06/bab_06_pengendalian_penyakit} %done
+% \clearpage
+% \include{bab_07/bab_07_kesehatan_lingkungan} %done
+% \clearpage
+\include{bab_08/bab_08_penutup}
+\clearpage
+%renewcommand for appendixtoc should be placed before appendices section
+\renewcommand\appendixtocname{Lampiran}
+\begin{appendices}
+% \include{bab_09_apendiks/bab_09_apendiks_1_spm}
+% \clearpage
+% \include{bab_09_apendiks/bab_09_apendiks_2_sdgs}
+% \clearpage
+% \include{bab_09_apendiks/bab_09_apendiks_3_iku}
+% \clearpage
+% \include{bab_09_apendiks/bab_09_apendiks_4_tabel_profil} %done
+% \cleardoublepage
+%% following appendix preserved for document history
+%\include{bab_09_apendiks/daftar_pustaka}
+%\cleardoublepage
+\end{appendices}
+%% print bibliography by biblatex package
+\nocite{*}
+\printbibliography[heading=bibintoc]
+\cleardoublepage
+
+\include{bab_09_apendiks/kolofon}
+\end{document} 
