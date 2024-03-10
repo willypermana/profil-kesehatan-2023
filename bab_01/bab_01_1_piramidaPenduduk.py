@@ -15,10 +15,10 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-import konstan
+# import konstan
 berkasData = currentdir + '\\bab_01_1_dataPiramidaPenduduk.csv'
 berkasSimpan = currentdir +'\\bab_01_1_piramidaPenduduk.pdf'
-# judulDiagram = 'Piramida Penduduk Kabupaten Belitung Timur\nTahun 2022'
+# judulDiagram = 'Piramida Penduduk Kabupaten Belitung Timur\nTahun 2023'
 
 # read data file
 colnames = ['kelompokUmur','popLakiLaki','popPerempuan']

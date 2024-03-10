@@ -9,8 +9,17 @@ locale.setlocale(locale.LC_ALL, 'Indonesian_indonesia.1252')
 plt.rcParams['pdf.fonttype'] = 42
 plt.style.use('seaborn-paper')
 
+import sys, os, inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+
+berkasData = currentdir + '\\bab_01_1_dataPiramidaPenduduk.csv'
+berkasSimpan = currentdir +'\\bab_01_1_piramidaPenduduk.pdf'
+# judulDiagram = 'Piramida Penduduk Kabupaten Belitung Timur\nTahun 2023'
+
 colnames = ['kelompokUmur','popLakiLaki','popPerempuan']
-data = pandas.read_csv(r'D:\dokumenDinkesBeltim2020\profil kesehatan 2019\profil 2019\bab_01\bab_01_1_dataPiramidaPenduduk.csv', names=colnames, sep=';')
+data = pandas.read_csv(berkasData, names=colnames, sep=';')
 sumbuY = data.kelompokUmur.tolist()
 bar2 = data.popLakiLaki.tolist()
 bar1 = data.popPerempuan.tolist()
@@ -64,6 +73,6 @@ pyrfig.suptitle('Piramida Penduduk Kabupaten Belitung Timur\nTahun 2019')
 pyrfig.set_figwidth(9)
 pyrfig.set_figheight(5)
 plt.tick_params(axis='both', which='major', labelsize='small')
-#pyrfig.savefig(r'D:\dokumenDinkesBeltim2020\profil kesehatan 2019\profil 2019\bab_01\bab_01_1_piramidaPenduduk.png',bbox_inches='tight')
+#pyrfig.savefig(berkasSimpan,bbox_inches='tight')
 #plt.close(pyrfig)
-plt.show(pyrfig)
+plt.show()
