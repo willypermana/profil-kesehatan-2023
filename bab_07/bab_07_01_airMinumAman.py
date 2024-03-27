@@ -13,7 +13,7 @@ sys.path.insert(0, parentdir)
 
 berkasData = currentdir +'\\bab_07_01_dataAirMinumAman.csv'
 berkasSimpan = currentdir +'\\bab_07_01_airMinumAman.pdf'
-# judulDiagram = 'Cakupan Sarana Air Minum Aman\nTahun 2022'
+# judulDiagram = 'Cakupan Sarana Air Minum Aman\nTahun 2023'
 sumbuX = 'Cakupan'
 sumbuY = 'Kecamatan\ Kabupaten'
 labelBar1 = 'Sarana Air Minum Aman'
@@ -38,6 +38,7 @@ ax.set_xlabel(sumbuX)
 ax.set_ylabel(sumbuY)
 formatter = FuncFormatter(lambda x, pos: "{:n}%".format(x))
 ax.xaxis.set_major_formatter(formatter)
+ax.set_xticks(tickerSumbuX)
 
 ax.set_yticks(ind)
 ax.set_yticklabels(list([ '\n'.join(wrap(l, 10)) for l in kecamatan ]))
