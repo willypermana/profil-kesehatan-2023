@@ -1,7 +1,9 @@
 \usepackage{fontspec}
 %\addfontfeature{LetterSpace=1.0}
 \defaultfontfeatures{Ligatures=TeX}
+%\setmainfont[Ligatures=TeX]{Noto Serif}
 \setmainfont{Roboto}[Mapping=tex-text]
+%\setmainfont{Noto Serif}[Mapping=tex-text]
 \usepackage[paperwidth=215mm,paperheight=330mm,tmargin=1in,bmargin=1in,lmargin=1.5in,rmargin=1in,driver=xetex,verbose]{geometry}
 %\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1.5in,rmargin=1in}
 \usepackage{fancyhdr}
@@ -16,6 +18,7 @@
 \usepackage{enumitem} % modify ordered list type
 \reversemarginpar % place todo notes on left margin
 \usepackage{graphicx}
+\usepackage{svg}
 \usepackage{microtype}
 \usepackage[toc, page]{appendix}
 \usepackage{pdfpages}
@@ -55,6 +58,7 @@
 %% therefore the bold and italic font must also be declared separately
 %\setromanfont{texgyrepagella-regular.otf}[BoldFont={texgyrepagella-bold.otf},ItalicFont={texgyrepagella-italic.otf}, Mapping=tex-text]
 %% disregrad the above. XeTex will use any fonts that's installed system-wide.
+%\setromanfont{Noto Serif}[Mapping=tex-text]
 \setromanfont{Roboto}[Mapping=tex-text]
 \setsansfont{Roboto}[Mapping=tex-text]
 \setmonofont{Envy Code R}
@@ -90,6 +94,13 @@
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\raggedright}
+%% sans-serif font for heading, serif font for normal text
+%\titleformat{\chapter}[hang]{\Huge\bfseries\sffamily}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\raggedright}
+%\titleformat*{\section}{\sffamily\Large\bfseries}
+%\titleformat*{\subsection}{\sffamily\large\bfseries}
+%\titleformat*{\subsubsection}{\sffamily\normalsize\bfseries}
+%\titleformat*{\paragraph}{\sffamily\normalsize\bfseries}
+%\titleformat*{\subparagraph}{\sffamily\normalsize\bfseries}
 
 %% redefine structure names
 \def\subsectionautorefname{Subseksi}
