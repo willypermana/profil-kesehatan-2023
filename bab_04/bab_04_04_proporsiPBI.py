@@ -19,7 +19,10 @@ judulDiagram = 'Proporsi PBI'
  
 # Data to plot
 labels = '', 'PBI'
-sizes = [91245681688,20702382400]
+paguDinkes = 102135300434
+paguJKN = 18799200000
+paguDinkesNonJKN = paguDinkes - paguJKN
+sizes = [paguDinkesNonJKN,paguJKN]
 colors = ['lightskyblue', 'lightcoral']
 explode = (0.1, 0)  # explode 1st slice
 
@@ -31,7 +34,7 @@ def my_autopct(pct):
 # plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         # autopct=lambda p : '{:n}%'.format(round(p,2)), shadow=True, textprops=dict(fontsize=12), startangle=80)
 plt.pie(sizes, explode=explode, labels=labels, colors=colors,
-        autopct=my_autopct, shadow=True, textprops=dict(fontsize=12), startangle=80)
+        autopct=my_autopct, shadow=True, textprops=dict(fontsize=12), startangle=90)
 
 plt.axis('equal')
 pyrfig = plt.figure(1)

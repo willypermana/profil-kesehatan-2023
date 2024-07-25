@@ -15,7 +15,7 @@ sys.path.insert(0, parentdir)
 berkasData = currentdir +'\\bab_02_2_dataRawat.csv'
 berkasSimpan = currentdir +'\\bab_02_2_rawat.pdf'
 # judulDiagram = 'Rawat Jalan dan Rawat Inap di Fasilitas Kesehatan'
-tickerSumbuX = np.arange(0,250100,50000)
+tickerSumbuX = np.arange(0,210100,50000)
 sumbuX = 'Jumlah Kunjungan'
 sumbuY = 'Jenis Perawatan'
 labelBar1 = 'Laki-laki'
