@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_05_06a_dataKB4TALKI.csv'
 berkasSimpan = currentdir +'\\bab_05_06a_KB4TALKI.pdf'
 # judulDiagram = 'KB4TALKI\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file

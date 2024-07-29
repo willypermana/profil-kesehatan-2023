@@ -16,7 +16,7 @@ berkasData = currentdir +'\\bab_05_13a_dataPrematur.csv'
 berkasSimpan = currentdir +'\\bab_05_13a_Prematur.pdf'
 # judulDiagram = 'Sebaran BBLR\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file

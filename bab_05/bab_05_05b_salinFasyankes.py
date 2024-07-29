@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_05_05b_dataSalinFasyankes.csv'
 berkasSimpan = currentdir +'\\bab_05_05b_salinFasyankes.pdf'
 # judulDiagram = 'Cakupan Pertolongan Persalinan\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas/Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,105,25)
 
 # read data file

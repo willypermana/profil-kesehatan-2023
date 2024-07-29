@@ -17,7 +17,7 @@ berkasData = currentdir +'\\bab_05_01_dataKematianIbu.csv'
 # judulDiagram = 'Kematian Ibu\nTahun 2021'
 berkasSimpan = currentdir +'\\bab_05_01_kematianIbu.pdf'
 sumbuX = 'Jumlah'
-sumbuY = 'Puskesmas'
+sumbuY = 'Puskesmas/ Kabupaten'
 
 # read data file
 colnames = ['kecamatan','kasusIbuHamil','kasusIbuSalin','kasusIbuNifas','jumlahKasusIbu']

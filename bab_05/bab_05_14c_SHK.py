@@ -15,9 +15,9 @@ sys.path.insert(0, parentdir)
 
 berkasData = currentdir +'\\bab_05_14c_dataSHK.csv'
 berkasSimpan = currentdir +'\\bab_05_14c_SHK.pdf'
-# judulDiagram = 'Cakupan Pemberian Tablet Tambah Darah\nTahun 2021'
+# judulDiagram = 'Cakupan SHK\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file

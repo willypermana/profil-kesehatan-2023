@@ -16,7 +16,7 @@ berkasData = currentdir +'\\bab_05_27a_dataGimulTumpatan.csv'
 berkasSimpan = currentdir +'\\bab_05_27a_gimulTumpatan.pdf'
 # judulDiagram = 'Cakupan Universal Child Immunization (UCI)\nTahun 2021'
 sumbuX = 'Rasio'
-sumbuY = 'Puskesmas\Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 labelBar1 = 'Rasio Tumpatan'
 tickerSumbuX = np.arange(0,7,1)
 

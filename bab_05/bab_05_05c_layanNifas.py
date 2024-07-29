@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_05_05c_dataLayanNifas.csv'
 berkasSimpan = currentdir +'\\bab_05_05c_layanNifas.pdf'
 # judulDiagram = 'Pelayanan Ibu Nifas\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file

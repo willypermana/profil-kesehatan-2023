@@ -16,7 +16,7 @@ berkasData = currentdir +'\\bab_05_16_dataPelayananBayi.csv'
 berkasSimpan = currentdir +'\\bab_05_16_pelayananBayi.pdf'
 # judulDiagram = 'Cakupan Pelayanan Kesehatan Bayi\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,126,25)
 
 # read data file

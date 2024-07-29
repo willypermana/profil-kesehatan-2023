@@ -16,7 +16,7 @@ berkasData = currentdir +'\\bab_05_09_dataKematianNeonatal.csv'
 berkasSimpan = currentdir +'\\bab_05_09_kematianNeonatal.pdf'
 # judulDiagram = 'Jumlah Kematian Neonatal\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,21,5)
 
 # read data file

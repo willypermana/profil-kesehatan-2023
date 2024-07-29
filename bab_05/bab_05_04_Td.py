@@ -18,7 +18,7 @@ berkasData = currentdir +'\\bab_05_04_dataTd.csv'
 berkasSimpan = currentdir +'\\bab_05_04_Td.pdf'
 # judulDiagram = 'Cakupan Td Ibu Hamil\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file

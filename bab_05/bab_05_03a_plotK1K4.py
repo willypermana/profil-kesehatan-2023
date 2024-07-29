@@ -67,6 +67,8 @@ pyrfig = plt.figure(1)
 pyrfig.set_figwidth(8)
 pyrfig.set_figheight(5)
 # tight_layout to make consistent size
+# adjust subplot to make room for legend
+fig.subplots_adjust(bottom=-0.15)
 plt.tight_layout()
 plt.savefig(berkasSimpan)
 plt.close(pyrfig)

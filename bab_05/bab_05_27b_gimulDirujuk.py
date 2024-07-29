@@ -16,7 +16,7 @@ berkasData = currentdir +'\\bab_05_27b_dataGimulDirujuk.csv'
 berkasSimpan = currentdir +'\\bab_05_27b_gimulDirujuk.pdf'
 # judulDiagram = 'Cakupan Universal Child Immunization (UCI)\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 labelBar1 = 'Kasus Gigi Dirujuk'
 tickerSumbuX = np.arange(0,110,25)
 

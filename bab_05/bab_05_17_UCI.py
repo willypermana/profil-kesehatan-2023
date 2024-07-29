@@ -16,7 +16,7 @@ berkasData = currentdir +'\\bab_05_17_dataUCI.csv'
 berkasSimpan = currentdir +'\\bab_05_17_UCI.pdf'
 # judulDiagram = 'Cakupan Universal Child Immunization (UCI)\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\Kabupaten'
+sumbuY = 'Kecamatan/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file
@@ -31,7 +31,7 @@ widthDL = 1
 
 # make bars
 fig, ax = plt.subplots()
-rects1 = ax.barh(ind, bar1, width, color='steelblue', label = 'UCI')
+rects1 = ax.barh(ind, bar1, width, color='steelblue', label = 'Desa UCI')
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)

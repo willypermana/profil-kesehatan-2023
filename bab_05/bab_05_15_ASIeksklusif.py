@@ -16,7 +16,7 @@ berkasData = currentdir +'\\bab_05_15_dataASIeksklusif.csv'
 berkasSimpan = currentdir +'\\bab_05_15_ASIeksklusif.pdf'
 # judulDiagram = 'Cakupan Inisiasi Menyusui Dini & ASI Eksklusif\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file
