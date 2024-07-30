@@ -15,11 +15,11 @@ berkasData = currentdir +'\\bab_05_29a_dataPelayananCatin.csv'
 berkasSimpan = currentdir +'\\bab_05_29a_pelayananCatin.pdf'
 # judulDiagram = 'Pelayanan Skrining Kesehatan Usia Produktif\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 labelBar1 = 'L'
 labelBar2 = 'P'
 labelBar3 = 'L+P'
-tickerSumbuX = np.arange(0,151,25)
+tickerSumbuX = np.arange(0,110,25)
 
 # read data file
 colnames = ['puskesmas','L','P','LP']
