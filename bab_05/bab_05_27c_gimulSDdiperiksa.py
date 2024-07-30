@@ -4,7 +4,8 @@ import pandas
 from textwrap import wrap
 from matplotlib.ticker import FuncFormatter
 import locale
-locale.setlocale(locale.LC_ALL, 'id_ID.UTF8')
+# locale.setlocale(locale.LC_ALL, 'id_ID.UTF8')
+locale.setlocale(locale.LC_ALL, '')
 
 import sys, os, inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
