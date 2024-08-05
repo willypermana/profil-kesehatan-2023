@@ -4,7 +4,7 @@ import pandas
 from textwrap import wrap
 from matplotlib.ticker import FuncFormatter
 import locale
-locale.setlocale(locale.LC_ALL, 'id_ID.UTF8')
+locale.setlocale(locale.LC_ALL, '')
 
 import sys, os, inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -15,8 +15,8 @@ berkasData = currentdir + '\\bab_06_01a_dataKasusTB.csv'
 berkasSimpan = currentdir +'\\bab_06_01a_kasusTB.pdf'
 # judulDiagram = 'Penemuan Kasus TB'
 sumbuX = 'Jumlah'
-sumbuY = 'Puskesmas\ Kabupaten'
-tickerSumbuX = np.arange(0,176,25)
+sumbuY = 'Puskesmas/ Kabupaten'
+tickerSumbuX = np.arange(0,301,50)
 labelBar1 = 'L'
 labelBar2 = 'P'
 labelBar3 = 'L+P'

@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_06_02_datapneumoniaBalita.csv'
 berkasSimpan = currentdir +'\\bab_06_02_pneumoniaBalita.pdf'
 # judulDiagram = 'Cakupan Penemuan Pneumonia Balita\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 
 # read data file

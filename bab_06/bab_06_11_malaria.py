@@ -11,22 +11,24 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-import konstan
-berkasData = konstan.direktori6+'bab_06_15_dataMalaria.csv'
-judulDiagram = 'Penemuan Kasus Malaria'
-sumbuY = 'Jumlah'
-berkasSimpan = konstan.direktori6+'bab_07_15_malaria.pdf'
+berkasData = currentdir +'\\bab_06_11_dataMalaria.csv'
+berkasSimpan = currentdir +'\\bab_06_11_malaria.pdf'
+# judulDiagram = 'Penemuan Kasus Malaria\nTahun 2021'
+sumbuX = 'Jumlah'
+sumbuY = 'Puskesmas/ Kabupaten'
+tickerSumbuX = np.arange(0,11,5)
 
 # read data file
-colnames = ['kecamatan','L','P','LP']
+colnames = ['puskesmas','L','P','LP']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
-kecamatan = data.kecamatan.tolist()
+puskesmas = data.puskesmas.tolist()
 bar1 = data.L.tolist()
 bar2 = data.P.tolist()
 bar3 = data.LP.tolist()
 
-ind = np.arange(len(kecamatan))  # the x locations for the groups
+ind = np.arange(len(puskesmas))  # the x locations for the groups
 width = 0.2       # the width of the bars
+widthDL = 0.5      # spacing for data labels
 
 # make bars
 fig, ax = plt.subplots()
@@ -35,20 +37,21 @@ rects2 = ax.barh(ind + width, bar2, width, color='orangered', label = 'P')
 rects3 = ax.barh(ind + 2*width, bar3, width, color='yellowgreen', label = 'L+P')
 
 # add some text for labels, title and axes ticks
-ax.set_title(judulDiagram)
+# ax.set_title(judulDiagram)
 # yticks can be set to auto
 ax.set_xticks(np.arange(0,16,5)) 
 ax.set_xlabel(sumbuY)
-formatter = FuncFormatter(lambda y, pos: "%d" % (y))
-ax.xaxis.set_major_formatter(formatter)
+ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: "{:n}".format(x)))
 
-ax.set_yticks(ind + width)
+ax.set_yticks(ind+width)
+ax.set_yticklabels(list([ '\n'.join(wrap(l, 10)) for l in puskesmas ]))
 ax.invert_yaxis()
-wrapKecamatan = [ '\n'.join(wrap(l, 10)) for l in kecamatan ]
-ax.set_yticklabels(list(wrapKecamatan), fontsize='small')
+ax.set_ylabel(sumbuY)
 
+ax.tick_params(axis='both', which='major', labelsize='small')
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
 
 box = ax.get_position()
 ax.set_position([box.x0, box.y0 + box.height * 0.1, box.width, box.height * 0.9])
@@ -67,6 +70,10 @@ for i, v in enumerate(bar3):
 pyrfig = plt.figure(1)
 pyrfig.set_figwidth(8)
 pyrfig.set_figheight(5)
-# fig.savefig(berkasSimpan, bbox_inches='tight')
-# plt.close(pyrfig)
-plt.show()
+# tight_layout to make consistent size
+# adjust subplot to make room for legend
+fig.subplots_adjust(bottom=-0.15)
+plt.tight_layout()
+plt.savefig(berkasSimpan)
+plt.close(pyrfig)
+# plt.show()

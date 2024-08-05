@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_06_14_dataDM.csv'
 berkasSimpan = currentdir +'\\bab_06_14_DM.pdf'
 # judulDiagram = 'Cakupan Pelayanan Diabetes Melitus\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 labelBar1 = 'Kasus DM'
 

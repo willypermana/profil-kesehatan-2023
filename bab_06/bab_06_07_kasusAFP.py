@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_06_07_dataAFP.csv'
 berkasSimpan = currentdir +'\\bab_06_07_AFP.pdf'
 # judulDiagram = 'Penemuan AFP Non Polio\nTahun 2022'
 sumbuX = 'Jumlah'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,3,2)
 labelBar1 = 'AFP Non-Polio'
 

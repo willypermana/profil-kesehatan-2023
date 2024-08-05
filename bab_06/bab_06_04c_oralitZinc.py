@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_06_04_dataDiare.csv'
 berkasSimpan = currentdir +'\\bab_06_04c_diareZinc.pdf'
 # judulDiagram = 'Penemuan dan Pengobatan Diare\nTahun 2021'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 labelBar1 = 'Diare balita mendapat zinc'
 tickerSumbuX = np.arange(0,110,25)
 
