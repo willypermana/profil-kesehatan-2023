@@ -16,7 +16,7 @@ berkasSimpan = currentdir +'\\bab_06_17d_kasusCovidPerUmur.pdf'
 # judulDiagram = 'Jumlah Kasus COVID-19 per Umur\nTahun 2022'
 sumbuX = 'Jumlah Kasus COVID-19'
 sumbuY = 'Puskesmas/ Luar Daerah/ Kabupaten'
-tickerSumbuX = np.arange(0,710,100)
+tickerSumbuX = np.arange(0,11,5)
 labelBar1 = '0 - 4 tahun'
 labelBar2 = '5 - 6 tahun'
 labelBar3 = '7 - 14 tahun'
@@ -35,7 +35,7 @@ bar5 = data.kasusUsila.tolist()
 
 ind = np.arange(len(puskesmas))  # the x locations for the groups
 width = 0.18       # the width of the bars
-widthDL = 0.5
+widthDL = 0.3
 
 # make bars
 fig, ax = plt.subplots()

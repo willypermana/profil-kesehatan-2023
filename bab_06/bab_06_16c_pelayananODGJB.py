@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_06_16c_dataPelayananODGJB.csv'
 berkasSimpan = currentdir +'\\bab_06_16c_pelayananODGJB.pdf'
 # judulDiagram = 'Cakupan Pelayanan ODGJB\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 labelBar1 = 'Pelayanan ODGJB'
 

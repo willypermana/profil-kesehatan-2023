@@ -16,7 +16,7 @@ berkasSimpan = currentdir +'\\bab_06_17e_kasusCovidPerJK.pdf'
 # judulDiagram = 'Jumlah Kasus COVID-19 Per Jenis Kelamin\nTahun 2022'
 sumbuX = 'Jumlah Kasus COVID-19'
 sumbuY = 'Puskesmas/ Luar Daerah/ Kabupaten'
-tickerSumbuX = np.arange(0,510,100)
+tickerSumbuX = np.arange(0,11,5)
 labelBar1 = 'Laki-laki'
 labelBar2 = 'Perempuan'
 
@@ -29,7 +29,7 @@ bar2 = data.kasusP.tolist()
 
 ind = np.arange(len(puskesmas))  # the x locations for the groups
 width = 0.4       # the width of the bars
-widthDL = 5
+widthDL = 0.18
 
 # make bars
 fig, ax = plt.subplots()

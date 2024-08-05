@@ -15,7 +15,7 @@ berkasData = currentdir +'\\bab_06_05a_dataBumilHB.csv'
 berkasSimpan = currentdir +'\\bab_06_05a_bumilHB.pdf'
 # judulDiagram = 'Deteksi Ibu Hamil HB\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 labelBar1 = 'Ibu hamil diperiksa Hepatitis HB'
 labelBar2 = 'Ibu hamil reaktif pemeriksaan HB'
 tickerSumbuX = np.arange(0,110,25)
@@ -60,9 +60,9 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v+0.5, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
-    ax.text(v+0.5, i+width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i+width, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize='x-small')
     
 # finishing
 pyrfig = plt.figure(1)

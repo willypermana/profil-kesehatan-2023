@@ -59,9 +59,16 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v + widthDL, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    # check if the coordinate is not NaN
+    if np.isfinite(v):
+        ax.text(v + widthDL, i, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize='x-small')
+    else:
+        ax.text(widthDL, i, 'Null', ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
-    ax.text(v + widthDL, i+width, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    if np.isfinite(v):
+        ax.text(v + widthDL, i+width, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize='x-small')
+    else:
+        ax.text(widthDL, i+width, 'Null', ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)

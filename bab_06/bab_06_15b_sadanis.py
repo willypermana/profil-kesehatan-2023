@@ -15,17 +15,17 @@ berkasData = currentdir +'\\bab_06_15b_dataSadanis.csv'
 berkasSimpan = currentdir +'\\bab_06_15b_sadanis.pdf'
 # judulDiagram = 'Cakupan Pemeriksaan Sadanis\nTahun 2022'
 sumbuX = 'Cakupan'
-sumbuY = 'Puskesmas\ Kabupaten'
+sumbuY = 'Puskesmas/ Kabupaten'
 tickerSumbuX = np.arange(0,110,25)
 labelBar1 = 'Pemeriksaan Sadanis'
-labelBar2 = 'Tumor/ Benjolan'
+labelBar2 = 'Curiga Kanker Payudara'
 
 # read data file
-colnames = ['puskesmas','sadanis','tumorbenjolan']
+colnames = ['puskesmas','sadanis','curigaKanker']
 data = pandas.read_csv(berkasData, names=colnames, sep=';')
 puskesmas = data.puskesmas.tolist()
 bar1 = data.sadanis.tolist()
-bar2 = data.tumorbenjolan.tolist()
+bar2 = data.curigaKanker.tolist()
 
 ind = np.arange(len(puskesmas))  # the x locations for the groups
 width = 0.4       # the width of the bars
@@ -58,9 +58,9 @@ ax.legend(fontsize='x-small', loc='upper center', bbox_to_anchor=(0.5, -0.15), f
 
 # add data label
 for i, v in enumerate(bar1):
-    ax.text(v+0.5, i, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize='x-small')
 for i, v in enumerate(bar2):
-    ax.text(v+0.5, i+0.3, '{:n}'.format(v), ha='left', va='center', fontsize='x-small')
+    ax.text(v+0.5, i+0.3, '{:n}'.format(round(v,2)), ha='left', va='center', fontsize='x-small')
 
 # finishing
 pyrfig = plt.figure(1)
