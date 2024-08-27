@@ -34,7 +34,8 @@ widthDL = 0.2      # spacing for data labels
 # make bars
 fig, ax = plt.subplots()
 rects1 = ax.barh(ind, bar1, width, color='steelblue', label=labelBar1)
-rects1[7].set_color('tomato')
+# in case need to set individual color
+#rects1[7].set_color('tomato')
 
 # add some text for labels, title and axes ticks
 # ax.set_title(judulDiagram)

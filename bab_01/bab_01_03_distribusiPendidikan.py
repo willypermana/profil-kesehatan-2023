@@ -33,7 +33,7 @@ fig1, ax1 = plt.subplots()
 # explodeTuple = (0.05, 0, 0.1, 0.0, 0.1, 0.3)
 # patches, texts, autotexts = ax1.pie(listPagu, autopct='%.2f%%', pctdistance=0.85, explode=explodeTuple, startangle=80)
 explodeTuple = (0.05, 0, 0.1, 0.0, 0.15, -0.05, 0.2,0.05)
-patches, texts, autotexts = ax1.pie(listJumlah[0:8], autopct='%.2f%%', pctdistance=1.2, explode=explodeTuple, startangle=80)
+patches, texts, autotexts = ax1.pie(listJumlah[0:8], autopct='%.2f%%', pctdistance=1.2, explode=explodeTuple, startangle=90, counterclock=False)
 #patches, texts, autotexts = ax1.pie(listJumlah[0:8], autopct=lambda pct: func(pct), pctdistance=1.2, explode=explodeTuple, startangle=80)
 
 
