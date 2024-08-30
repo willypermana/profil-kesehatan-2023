@@ -24,7 +24,7 @@ paguJKN = 18799200000
 paguDinkesNonJKN = paguDinkes - paguJKN
 sizes = [paguDinkesNonJKN,paguJKN]
 colors = ['lightskyblue', 'lightcoral']
-explode = (0.1, 0)  # explode 1st slice
+explode = (0.05, 0.05)  # explode 1st slice
 
 # we only want to display one slice
 # return the desired format with replace instead of lambda
@@ -33,10 +33,15 @@ def my_autopct(pct):
     
 # plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         # autopct=lambda p : '{:n}%'.format(round(p,2)), shadow=True, textprops=dict(fontsize=12), startangle=80)
-plt.pie(sizes, explode=explode, labels=labels, colors=colors,
-        autopct=my_autopct, shadow=True, textprops=dict(fontsize=12), startangle=90)
+# plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct=my_autopct, shadow=True, textprops=dict(fontsize=12), startangle=90)
+plt.pie(sizes, explode=explode, labels=labels, autopct=my_autopct, shadow=True, textprops=dict(fontsize=12), startangle=90)
+
+centre_circle = plt.Circle((0,0),0.45,fc='white')
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
 
 plt.axis('equal')
+
 pyrfig = plt.figure(1)
 # pyrfig.suptitle(judulDiagram)
 pyrfig.set_figwidth(7)

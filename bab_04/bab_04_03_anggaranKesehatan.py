@@ -27,8 +27,8 @@ porcent = 100.*sliceJumlah/sliceJumlah.sum()
 fig1, ax1 = plt.subplots()
 # explodeTuple = (0.05, 0, 0.1, 0.0, 0.1, 0.3)
 # patches, texts, autotexts = ax1.pie(listPagu, autopct='%.2f%%', pctdistance=0.85, explode=explodeTuple, startangle=80)
-explodeTuple = (0.05, 0.07, 0.00, 0.05, 0.2, 0.1)
-patches, texts, autotexts = ax1.pie(listJumlah[0:7], autopct='%.2f%%', pctdistance=1.15, explode=explodeTuple, startangle=80)
+explodeTuple = (0.05, 0.07, 0.00, 0.05, 0.2, 0.1, 0)
+patches, texts, autotexts = ax1.pie(listJumlah[0:8], autopct='%.2f%%', pctdistance=1.18, explode=explodeTuple, startangle=90, counterclock=False)
 
 for t in autotexts:
     t.set_size(9)
@@ -52,7 +52,7 @@ if sort_legend:
 
 box = ax1.get_position()
 ax1.set_position([box.x0, box.y0 + box.height * 0.1, box.width, box.height * 0.9])
-plt.legend(patches, labels, loc='center', bbox_to_anchor=(0.5, -0.1),fontsize=8, fancybox=True, shadow=True, ncol=2)
+plt.legend(patches, labels, loc='center', bbox_to_anchor=(0.5, -0.15),fontsize=8, fancybox=True, shadow=True, ncol=2)
 		   
 plt.axis('equal')
 
